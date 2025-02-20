@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class FundamentosService implements iFundamentosService{
+public class FundamentosService implements IFundamentosService{
 
     @Override
     public String validarNumeroPrimo(int numero) {
@@ -14,7 +14,7 @@ public class FundamentosService implements iFundamentosService{
             return "No es primo";
         }
 
-        for (int i = 0; i <= Math.sqrt(numero); i++){
+        for (int i = 2; i <= Math.sqrt(numero); i++){
             if (numero % i == 0) {
                 return "No es primo";
             }
